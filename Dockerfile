@@ -25,6 +25,12 @@ RUN apt-get install -y ros-$ROS_DISTRO-cv-bridge
 RUN apt-get install -y ros-$ROS_DISTRO-pcl-ros
 RUN apt-get install -y ros-$ROS_DISTRO-image-proc
 
+# necessary for trafficlight detection with mobilenet
+RUN apt-get install -y protobuf-compiler
+RUN pip install --upgrade matplotlib
+RUN apt-get install -y python-tk
+RUN pip install pillow --upgrade
+
 # socket io
 RUN apt-get install -y netbase
 
